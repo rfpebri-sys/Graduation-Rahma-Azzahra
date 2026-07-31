@@ -1,1 +1,106 @@
-<!DOCTYPE html> <html> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>🎓 Undangan Wisuda</title> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <style> * { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: 'Segoe UI', sans-serif; min-height: 100vh; display: flex; justify-content: center; align-items: center; background: linear-gradient(145deg, #0b1120, #1a2744); padding: 20px; } .card { max-width: 500px; width: 100%; background: rgba(255,255,255,0.05); backdrop-filter: blur(20px); border-radius: 40px; padding: 40px 30px; text-align: center; border: 1px solid rgba(255,215,0,0.1); animation: fadeIn 1s ease; } @keyframes fadeIn { 0% { opacity: 0; transform: scale(0.9); } 100% { opacity: 1; transform: scale(1); } } .toga { font-size: 70px; display: block; animation: goyang 2s infinite; } @keyframes goyang { 0%,100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } } h1 { font-size: 2.5rem; background: linear-gradient(135deg, #f6d365, #fda085); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 10px 0; } .sub { color: rgba(255,255,255,0.5); font-size: 1rem; } .info { color: #fff; margin: 15px 0; line-height: 2; } .info i { color: #f6d365; width: 25px; } .btn { display: inline-block; padding: 14px 40px; border-radius: 50px; background: linear-gradient(135deg, #f6d365, #fda085); color: #000; font-weight: 700; text-decoration: none; margin: 15px 0; transition: 0.3s; border: none; cursor: pointer; } .btn:hover { transform: scale(1.05); box-shadow: 0 8px 25px rgba(253,160,133,0.4); } .share { margin-top: 20px; } .share a { color: rgba(255,255,255,0.4); margin: 0 12px; font-size: 1.5rem; transition: 0.3s; } .share a:hover { color: #f6d365; } .footer { color: rgba(255,255,255,0.1); font-size: 0.7rem; margin-top: 20px; } </style> </head> <body> <div class="card"> <span class="toga">🎓</span> <h1>Happy Graduation!</h1> <p class="sub">— [Rahma Azzahra] —</p> <div class="info"> <p><i class="fas fa-calendar"></i> Jumat, 31 Juli 2026</p> <p><i class="fas fa-clock"></i> 09:00 - 12:00 WIB</p> <p><i class="fas fa-map-marker-alt"></i> Gedung Serbaguna</p> </div> <button class="btn" onclick="rsvp()"><i class="fas fa-check"></i> Konfirmasi</button> <div class="share"> <a href="#" onclick="shareWA()"><i class="fab fa-whatsapp"></i></a> <a href="#" onclick="copyLink()"><i class="fas fa-link"></i></a> </div> <div class="footer">✨ #SelamatWisuda ✨</div> </div> <script> function rsvp() { const nama = prompt('Febrian:'); if (nama) alert(`✅ Terima kasih ${nama}!`); } function shareWA() { window.open(`https://wa.me/?text=${encodeURIComponent('🎓 Saya diundang ke wisuda! ' + window.location.href)}`); } function copyLink() { navigator.clipboard.writeText(window.location.href); alert('✅ Link disalin!'); } </script> </body> </html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎓 Undangan Wisuda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(145deg, #0b1120, #1a2744);
+            padding: 20px;
+        }
+        .card {
+            max-width: 500px;
+            width: 100%;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 40px;
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid rgba(255,215,0,0.1);
+            animation: fadeIn 1s ease;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        .toga { font-size: 70px; display: block; animation: goyang 2s infinite; }
+        @keyframes goyang {
+            0%,100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+        }
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #f6d365, #fda085);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 10px 0;
+        }
+        .sub { color: rgba(255,255,255,0.5); font-size: 1rem; }
+        .info { color: #fff; margin: 15px 0; line-height: 2; }
+        .info i { color: #f6d365; width: 25px; }
+        .btn {
+            display: inline-block;
+            padding: 14px 40px;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #f6d365, #fda085);
+            color: #000;
+            font-weight: 700;
+            text-decoration: none;
+            margin: 15px 0;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover { transform: scale(1.05); box-shadow: 0 8px 25px rgba(253,160,133,0.4); }
+        .share { margin-top: 20px; }
+        .share a {
+            color: rgba(255,255,255,0.4);
+            margin: 0 12px;
+            font-size: 1.5rem;
+            transition: 0.3s;
+        }
+        .share a:hover { color: #f6d365; }
+        .footer { color: rgba(255,255,255,0.1); font-size: 0.7rem; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <span class="toga">🎓</span>
+        <h1>Happy Graduation!</h1>
+        <p class="sub">— [Rahma Azzahra] —</p>
+        <div class="info">
+            <p><i class="fas fa-calendar"></i> Jumat 31 Juli 2026</p>
+            <p><i class="fas fa-clock"></i> 09:00 - 12:00 WIB</p>
+            <p><i class="fas fa-map-marker-alt"></i> Gedung Serbaguna</p>
+        </div>
+        <button class="btn" onclick="rsvp()"><i class="fas fa-check"></i> Konfirmasi</button>
+        <div class="share">
+            <a href="#" onclick="shareWA()"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" onclick="copyLink()"><i class="fas fa-link"></i></a>
+        </div>
+        <div class="footer">✨ #SelamatWisuda ✨</div>
+    </div>
+
+    <script>
+        function rsvp() {
+            const nama = prompt('Febrian:');
+            if (nama) alert(`✅ Terima kasih ${nama}!`);
+        }
+        function shareWA() {
+            window.open(`https://wa.me/?text=${encodeURIComponent('🎓 Saya diundang ke wisuda! ' + window.location.href)}`);
+        }
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            alert('✅ Link disalin!');
+        }
+    </script>
+</body>
+                 </html>
